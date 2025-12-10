@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sweetbite-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-sweetbite-700 transition-all transform hover:scale-105 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-sweetbite-600 text-sweetbite-600 px-6 py-3 rounded-lg font-semibold hover:bg-sweetbite-600 hover:text-white transition-all transform hover:scale-105;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Fix for floating elements overlapping */
+  .floating-element {
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    z-index: 20;
+    position: relative;
+  }
+  
+  .auth-section {
+    z-index: 10;
+    position: relative;
+  }
+}
